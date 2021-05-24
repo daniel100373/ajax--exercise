@@ -16,6 +16,8 @@ document.querySelector("#button5").addEventListener("click", function (e) {
 });
 let showbutton = document.querySelector("#button4");
 showbutton.addEventListener("click", (e) => {
+    var all_Inputs = $("input[type=text]");
+    all_Inputs.val("");
     $.ajax({
         url: "/all",
         type: "GET",
@@ -36,6 +38,8 @@ showbutton.addEventListener("click", (e) => {
 
 let searchButton = document.querySelector("#button1");
 searchButton.addEventListener("click", (e) => {
+    var all_Inputs = $("input[type=text]");
+    all_Inputs.val("");
     $.ajax({
         url: "/all",
         type: "GET",
@@ -57,6 +61,8 @@ searchButton.addEventListener("click", (e) => {
 
 let updateButton = document.querySelector("#button2");
 updateButton.addEventListener("click", (e) => {
+    var all_Inputs = $("input[type=text]");
+    all_Inputs.val("");
     let data = { id: $("#addId").val(), name: $("#addName").val() };
     $.ajax({
         url: "/add",
@@ -75,6 +81,8 @@ updateButton.addEventListener("click", (e) => {
 
 let deleteButton = document.querySelector("#button3");
 deleteButton.addEventListener("click", (e) => {
+    var all_Inputs = $("input[type=text]");
+    all_Inputs.val("");
     let data = { id: $("#stuId").val() };
     $.ajax({
         url: "/delete",
@@ -89,4 +97,14 @@ deleteButton.addEventListener("click", (e) => {
             del.appendChild(h1);
         },
     });
+});
+
+let reload = document.querySelector("#button5");
+reload.addEventListener("click", (e) => {
+    var all_Inputs = $("input[type=text]");
+    all_Inputs.val("");
+    $("div.showwstu").empty();
+    $("div.hi").empty();
+    $("div.add").empty();
+    $("div.del").empty();
 });
