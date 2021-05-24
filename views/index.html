@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>StudentSystem</title>
+</head>
+<body>
+<form id="show" >
+    <button id="button4" type="submit" >list all student</button>
+    <button id="button5" type="submit" >delete</button>
+    <div id="sss" class="showwstu">
+
+    </div>
+</form>
+    <br>
+    <form id="search">
+        student ID:
+        <input type="text" name="id" id="id">
+        <br>
+        <button id="button1" type="submit">search specific student</button>
+        <div class="hi">
+
+        </div>
+    </form>
+    <form action="" id="add">
+    <br>
+   student ID:
+    <input type="text" name="addId" id="addId">
+    <br>
+    student name:
+    <input type="text" name="addName" id="addName">
+    <br>
+    <button id="button2" type="submit">add new student</button>
+    <div class="add">
+        
+    </div>
+    <br>
+    </form>
+    <form id="delete">
+    <label for="stuId">student ID:</label>
+    <input type="text" name="stuId" id="stuId">
+    <br>
+    <button id="button3" type="submit">delete specific student</button>
+    <div class="del">
+
+    </div>
+</form>    
+<script src="./ajax.js"></script>
+</body>
+</html>
